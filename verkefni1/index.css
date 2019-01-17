@@ -1,0 +1,44 @@
+body{
+    font-family: sans-serif;
+    border: 2px solid blue;
+    margin: 2em auto;  /* top+bottom hér er bil L + R jafnað */
+    padding: 2em;
+    max-width: 50em;
+}
+h1 {
+    color: firebrick;
+}
+h2 {
+    color:olive
+}
+ul li {
+    color:orangered;
+}
+a:link {
+    color:green
+}
+a:visited {
+    color:fuchsia
+}
+a:hover,
+a:active {
+    color:gold
+}
+.poem {
+    font-style:italic;
+    color:green;
+    margin-left: 3em;
+}
+.poem strong {
+    color:red;
+}
+.elvis {
+    border:1px solid blue;
+    padding:1em;
+}
+.elvis strong {
+    color:tomato
+}
+em{
+    color:blue
+}
