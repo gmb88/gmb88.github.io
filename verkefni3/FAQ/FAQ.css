@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    padding: 1px solid;
+    margin: 1em auto;
+    line-height: 1.5;
+    background-color: silver;
+}
+header {
+    grid-area: header;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+}
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+}
+article {
+    grid-area: article;
+    text-align: justify;
+    margin: 0;
+    padding: 1em;
+    background-color: peru;
+}
+.aside1 {
+    grid-area: aside1;
+    padding: 1em;
+    margin: 0;
+    background-color: greenyellow;
+}
+.aside2 {
+    grid-area: aside2;
+    padding: 1em;
+    margin: 0;
+    background-color: greenyellow;
+    font-family: 'Forum', cursive;
+}
+h2 {
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+}
+h3 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+footer {
+    grid-area: footer;
+}
+/* base */
+body {
+    max-width: 60em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+main {
+    display: grid;
+    grid-template-areas: 
+    "aside1 article aside2";
+    grid-template-rows: auto;
+}
+.article {
+    display: grid;
+    text-align: justify;
+}
+.topnav {
+    background-color: gray;
+}
+.topmenu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Bungee Inline', cursive;
+}
+.footnav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Bungee Inline', cursive;
+}
+footer {
+    background-color: beige;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: unset;
+}
+a:hover,
+a:active {
+    color: red;
+}

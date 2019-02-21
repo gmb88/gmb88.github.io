@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+    padding: 1px solid;
+    margin: 1em auto;
+    line-height: 1.5;
+    background-color: royalblue;
+}
+header {
+    grid-area: header;
+    text-align: center;
+}
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+    background-color: rgb(99, 35, 35);
+}
+article {
+    grid-area: article;
+    text-align: justify;
+    margin: 0;
+    padding: 1em;
+}
+.aside1 {
+    grid-area: aside1;
+    padding: 1em;
+    margin: 0;
+}
+.aside2 {
+    grid-area: aside2;
+    padding: 1em;
+    margin: 0;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+footer {
+    grid-area: footer;
+}
+/* base */
+body {
+    max-width: 60em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+main {
+    display: grid;
+    grid-template-areas: 
+    "aside1 article aside2";
+}
+article {
+    display: grid;
+    text-align: justify;
+}
+.topnav {
+    background-color: gray;
+}
+.topmenu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+.footnav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+footer {
+    background-color: beige;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: unset;
+}
+a:hover,
+a:active {
+    color: red;
+}
