@@ -1,0 +1,96 @@
+
+body {
+    display: grid;
+    background-image: linear-gradient(to right, rgb(67, 67, 245), white);
+    padding: 1px solid;
+    margin: 2em;
+    height: 100vh;
+}
+.efst {
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: rgb(240, 124, 124);
+    font-size: 30px;
+    color: black;
+}
+header {
+    grid-area: header;
+    display: grid;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    text-align: center;
+    margin: 2em;
+    padding-right: 8em;
+    font-size: 24px;
+    font-family: 'Alegreya', serif;
+    color: rgb(253, 181, 47);
+    background: linear-gradient(to right, rgb(243, 133, 30) 0%, #6729b4 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.aside {
+    grid-area: aside;
+    display: grid;
+    justify-content: center;
+    padding-left: 8em;
+    font-size: 19px;
+    font-family: 'Source Code Pro', monospace;
+}
+footer {
+    grid-area: footer;
+    display: grid;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-left: 50px;
+}
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    font-family: 'Luckiest Guy', cursive;
+    background: linear-gradient(to right, rgb(243, 133, 30) 0%, #9247ee 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+body {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+main {
+    display: grid;
+    grid-template-areas:
+    "main aside";
+    grid-template-columns: 2fr 1fr;
+}
+.tag2019 {
+    text-align: right;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+h2 {
+    font-size: 32px;
+    font-family: 'Shojumaru', cursive;
+}
+h4 {
+    font-size: 20px;
+}
+a:hover {
+    color: rgb(248, 185, 69);
+}
+a:visited {
+    color: rgb(248, 185, 69);
+}
