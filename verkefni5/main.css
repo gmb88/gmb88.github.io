@@ -1,0 +1,103 @@
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgb(243, 133, 30) 70%, #9247ee 100%);
+
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+}
+.wrapper {
+    max-width: 60em;
+    margin: 0 auto;
+}
+.efst {
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: rgb(240, 124, 124);
+    font-size: 30px;
+    color: black;
+}
+header {
+    grid-area: header;
+    display: grid;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "main aside";
+    grid-gap:2em;
+}
+.aside {
+    grid-area: aside;
+    display: grid;
+    align-self: start;
+}
+.map {
+    justify-content: last baseline;
+}
+footer {
+    grid-area: footer;
+    display: grid;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.1em;
+}
+.tag2019 {
+    text-align: right;
+}
+h1, h2, h3 {
+    font-family: 'Shojumaru', cursive;
+}
+h1 {
+    text-align: center;
+    font-size: 2.7em;
+}
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+h3 {
+    font-size: 1.8em;
+}
+h5 {
+    text-align: right;
+}
+a:link {
+color: black;
+}
+a:visited {
+    color: bisque;
+}
+a:hover {
+    color: rgb(45, 248, 4);
+}
+
+/* verkefni 5 */
+.topmenu {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.topmenu a {
+    display: block;
+    color: bisque;
+    font-size: 1.8em;
+}
+.topnav {
+    max-width: 30em;
+    margin: 0 auto;
+}
