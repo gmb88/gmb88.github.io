@@ -1,10 +1,19 @@
 
 body {
-    display: grid;
-    background-image: linear-gradient(to right, rgb(67, 67, 245), white);
-    padding: 1px solid;
-    margin: 2em;
     height: 100vh;
+    background: linear-gradient(to right, rgb(243, 133, 30) 70%, #9247ee 100%);
+
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+}
+.wrapper {
+    max-width: 60em;
+    margin: 0 auto;
 }
 .efst {
     border-radius: 50%;
@@ -24,23 +33,17 @@ header {
 .main {
     grid-area: main;
     display: grid;
-    text-align: center;
-    margin: 2em;
-    padding-right: 8em;
-    font-size: 24px;
-    font-family: 'Alegreya', serif;
-    color: rgb(253, 181, 47);
-    background: linear-gradient(to right, rgb(243, 133, 30) 0%, #6729b4 100%);
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    grid-template-areas:
+    "main aside";
+    grid-gap:2em;
 }
 .aside {
     grid-area: aside;
     display: grid;
-    justify-content: center;
-    padding-left: 8em;
-    font-size: 19px;
-    font-family: 'Source Code Pro', monospace;
+    align-self: start;
+}
+.map {
+    justify-content: last baseline;
 }
 footer {
     grid-area: footer;
@@ -48,49 +51,53 @@ footer {
 }
 .col-3 {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    margin-left: 50px;
-}
-.col-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
-    font-family: 'Luckiest Guy', cursive;
-    background: linear-gradient(to right, rgb(243, 133, 30) 0%, #9247ee 100%);
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-body {
-    display: grid;
-    grid-template-areas:
-    "header"
-    "main"
-    "aside"
-    "footer";
-}
-main {
-    display: grid;
-    grid-template-areas:
-    "main aside";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.1em;
 }
 .tag2019 {
     text-align: right;
 }
-h1 {
-    text-align: center;
-    font-size: 50px;
-}
-h2 {
-    font-size: 32px;
+h1, h2, h3 {
     font-family: 'Shojumaru', cursive;
 }
-h4 {
-    font-size: 20px;
+h1 {
+    text-align: center;
+    font-size: 2.7em;
 }
-a:hover {
-    color: rgb(248, 185, 69);
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+h3 {
+    font-size: 1.8em;
+}
+h5 {
+    text-align: right;
+}
+a:link {
+color: black;
 }
 a:visited {
-    color: rgb(248, 185, 69);
+    color: bisque;
+}
+a:hover {
+    color: rgb(45, 248, 4);
+}
+
+/* verkefni 5 */
+.topmenu {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.topmenu a {
+    display: block;
+    color: bisque;
+    font-size: 1.8em;
+}
+.topnav {
+    max-width: 30em;
+    margin: 0 auto;
 }
