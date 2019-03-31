@@ -2,7 +2,6 @@
 body {
     height: 100vh;
     background: linear-gradient(to right, rgb(243, 133, 30) 70%, #9247ee 100%);
-
     display: grid;
     grid-template-areas:
     "header"
@@ -11,21 +10,12 @@ body {
     "aside"
     "footer";
 }
+/* Div wrapper utan um body */
 .wrapper {
     max-width: 60em;
     margin: 0 auto;
 }
-.efst {
-    border-radius: 50%;
-    text-align: center;
-    display: block;
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    background-color: rgb(240, 124, 124);
-    font-size: 30px;
-    color: black;
-}
+
 header {
     grid-area: header;
     display: grid;
@@ -42,9 +32,7 @@ header {
     display: grid;
     align-self: start;
 }
-.map {
-    justify-content: last baseline;
-}
+/* footerinn og grid layoutið */
 footer {
     grid-area: footer;
     display: grid;
@@ -54,9 +42,12 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1.1em;
 }
+
+/* Ártalið neðst á síðunni */
 .tag2019 {
     text-align: right;
 }
+
 h1, h2, h3 {
     font-family: 'Shojumaru', cursive;
 }
@@ -75,7 +66,7 @@ h5 {
     text-align: right;
 }
 a:link {
-color: black;
+    color: black;
 }
 a:visited {
     color: bisque;
@@ -84,7 +75,7 @@ a:hover {
     color: rgb(45, 248, 4);
 }
 
-/* verkefni 5 */
+/* Menu listinn efst og allt því tengt */
 .topmenu {
     display: flex;
     flex-flow: row wrap;
@@ -100,4 +91,16 @@ a:hover {
 .topnav {
     max-width: 30em;
     margin: 0 auto;
+}
+/* takkinn sem fer efst á síðu - föst staðsetning */
+.efst {
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: rgb(240, 124, 124);
+    font-size: 30px;
+    color: black;
 }
