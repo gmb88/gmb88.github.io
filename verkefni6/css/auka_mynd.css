@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(238, 88, 88);
+}
+.roses {
+    max-width: 480px;
+    max-height: auto;
+}
+
+@media screen and (min-width: 37.5em) {
+    .roses {
+        max-width: 600px;
+        max-height: auto;
+    }
+}
+@media screen and (min-width: 80em) {
+    .roses {
+        max-width: 80em;
+        max-height: auto;
+    }
+}
+@media screen and (min-width: 120em) {
+    .roses {
+        max-width: 130em;
+        max-height: auto;
+    }
+}

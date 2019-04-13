@@ -1,4 +1,7 @@
-
+* {
+    box-sizing: border-box;
+}
+/* @media screen and (min-width: 0-30em) - Fyrir síma */
 body {
     height: 100vh;
     background: linear-gradient(to right, rgb(243, 133, 30) 70%, #9247ee 100%);
@@ -9,24 +12,23 @@ body {
     "main"
     "aside"
     "footer";
-}
-/* Div wrapper utan um body */
-.wrapper {
-    max-width: 60em;
-    margin: 0 auto;
-}
-
-header {
-    grid-area: header;
-    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
 }
 .main {
     grid-area: main;
     display: grid;
     grid-template-areas:
-    "main aside";
-    grid-gap:2em;
+    "main"
+    "aside";
+    grid-gap:0;
+    grid-template-columns: 1fr;
 }
+header {
+    grid-area: header;
+    display: grid;
+}
+
 .aside {
     grid-area: aside;
     display: grid;
@@ -39,8 +41,7 @@ footer {
 }
 .col-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 1.1em;
+    grid-template-columns: 1fr;
 }
 
 /* Ártalið neðst á síðunni */
@@ -51,20 +52,7 @@ footer {
 h1, h2, h3 {
     font-family: 'Shojumaru', cursive;
 }
-h1 {
-    text-align: center;
-    font-size: 2.7em;
-}
-h2 {
-    font-size: 1.8em;
-    text-align: center;
-}
-h3 {
-    font-size: 1.8em;
-}
-h5 {
-    text-align: right;
-}
+
 a:link {
     color: black;
 }
@@ -86,12 +74,8 @@ a:hover {
 .topmenu a {
     display: block;
     color: bisque;
-    font-size: 1.8em;
 }
-.topnav {
-    max-width: 30em;
-    margin: 0 auto;
-}
+
 /* takkinn sem fer efst á síðu - föst staðsetning */
 .efst {
     border-radius: 50%;
@@ -101,6 +85,101 @@ a:hover {
     bottom: 1em;
     right: 1em;
     background-color: rgb(240, 124, 124);
-    font-size: 30px;
     color: black;
+}
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 37.5em) {
+    .iframe {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "main aside";
+        grid-gap:1em;
+        grid-template-columns: 2fr 1fr;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* Menu listinn efst og allt því tengt */
+    .topmenu {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-between;
+        list-style-type: none;
+        font-size: 2em;
+    }
+    .iframe {
+        max-width: 100%;
+        height: 220px;
+    }
+
+}
+@media screen and (min-width: 60em) {
+    /* Div wrapper utan um body */
+    .wrapper {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 80em) {
+    /* Div wrapper utan um body */
+    .wrapper {
+        max-width: 80em;
+        margin: 0 auto;
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "main aside";
+        grid-gap:1em;
+        grid-template-columns: 1fr 1fr;
+    }
+    /* Menu listinn efst og allt því tengt */
+    .topmenu {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+    .iframe {
+        max-width: 100%;
+        height: 420px;
+    }
+}
+@media screen and (min-width: 120em) {
+    .wrapper {
+        max-width: 120em;
+        margin: 0 auto;
+    }
+    /* Menu listinn efst og allt því tengt */
+    .topmenu {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+    .iframe {
+        width: 50em;
+        height: 30em;
+    }
+    .img {
+        width: 80%;
+    }
 }
