@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    grid-area: header;
+}
+.topnav {
+    grid-area: topnav;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+/* @media screen and (min-width: 0-30em) = 480 */
+body {
+    display: grid;
+    background: black;
+    grid-template-areas:
+    "header"
+    "topnav"
+    "main"
+    "footer";
+    grid-auto-columns: 1fr;
+    margin: 0 auto;
+    background-image: url("img/Horde_insignia_2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+
+}
+.header {
+    display: grid;
+    justify-content: center;
+    color: yellow;
+}
+main {
+    display: grid;
+    grid-template-areas:
+    "main";
+    grid-gap:0;
+    grid-template-columns: 1fr;
+}
+.iframe {
+    width: 460px;
+    height: 315px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.Blizzard {
+    color: yellow;
+    text-justify: center;
+    line-height: 150%;
+}
+.Factions {
+    align-self: center;
+}
+footer {
+    display: grid;
+    grid-gap:0;
+    grid-template-columns: 1fr;
+    padding: 2em auto;
+    color: yellow;
+}
+footer a {
+    color: yellow;  
+}
+
+.topmenu {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-around;
+    list-style-type: none;
+    color: yellow;
+}
+.topmenu a {
+    display: block;
+    color: yellow;
+}
+
+/* 37.5em = 600px */
+@media screen and (min-width: 37.5em) {
+    .iframe {
+        width: 580px;
+        height: 315px;
+    }
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+    .poster {
+        padding-left: 4.5em;
+    }
+    footer {
+        display: grid;
+        grid-gap:0;
+        grid-template-columns: 1fr 1fr;
+        padding: 2em auto;
+        color: yellow;
+    }
+    .topmenu {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-around;
+        list-style-type: none;
+        color: yellow;
+        font-size: 1.14em;
+        padding-right: 1.8em;
+    }
+    .Blizzard {
+        color: yellow;
+        text-justify: center;
+    }
+}
